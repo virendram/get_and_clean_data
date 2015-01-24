@@ -1,30 +1,26 @@
-Getting and Cleaning Data: Course Project
-=========================================
+Course project: Coursera -> Getting and Cleaning data
+=======================================================
 
 Introduction
 ------------
-This repository contains my work for the course project for the Coursera course "Getting and Cleaning data", part of the Data Science specialization.
-What follows first are my notes on the original data.
+This repo has the code and the results for the coursera project on getting and cleaning data
+
 About the raw data
 ------------------
+The testing and the training datasets contains the following:
 
-The features (561 of them) are unlabeled and can be found in the x_test.txt. 
-The activity labels are in the y_test.txt file.
-The test subjects are in the subject_test.txt file.
-
-The same holds for the training set.
+1) Unlabeled features (561 of them) stored in the x_test.txt. 
+2) Activity labels stored in the y_test.txt file.
+3) Subjects stored in the subject_test.txt file.
 
 About the script and the tidy dataset
 -------------------------------------
-I created a script called run_analysis.R which will merge the test and training sets together.
-Prerequisites for this script:
+The script "run_analysis.R" merges the test and training sets together.
+Before the script runs, the working directory has to be se where the extracted .zip files are stored
 
-1. the UCI HAR Dataset must be extracted and..
-2. the UCI HAR Dataset must be availble in a directory called "UCI HAR Dataset"
+Only labeled columns containing information about mean and standard deviation after merging the training and testing datasets are stored. 
 
-After merging testing and training, labels are added and only columns that have to do with mean and standard deviation are kept.
-
-Lastly, the script will create a tidy data set containing the means of all the columns per test subject and per activity.
+Script creates a tidy data set containing the means of all the columns per test subject and per activity.
 This tidy dataset will be written to a tab-delimited file called tidy.txt, which can also be found in this repository.
 
 About the Code Book
