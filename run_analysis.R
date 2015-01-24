@@ -50,4 +50,4 @@ tidy = aggregate(merged_data, by=list(activity = merged_data$activity, subject=m
 # Remove the subject and activity column, since a mean of those has no use
 tidy[,90] = NULL
 tidy[,89] = NULL
-write.table(tidy, "tidy.txt", sep="\t")
+write.table(tidy, "tidy.txt", sep="\t",row.name=FALSE)
